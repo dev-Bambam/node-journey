@@ -1,6 +1,6 @@
 var time = 0;
 
-let timer = setInterval(() => {
+const timer = setInterval(() => {
     time += 1
     // console.log(`${time} sec has passed`);
 

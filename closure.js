@@ -3,7 +3,7 @@ function outerFunction(outerVariable) {
     console.log(`Outer Variable: ${outerVariable}`);
     console.log(`Inner Variable: ${innerVariable}`);
   };
-}
+} 
 
 const newFunction = outerFunction("Hello"); // Returns innerFunction
 newFunction("World");

@@ -28,6 +28,10 @@ console.log('my Promise tutorial')
 //     })
 // };
 
+const fetchData = async () => {
+    const response = await fetch(url);
+}
+
 // // consuming Promise 
 // const dataFetch = fetchData();
 // dataFetch
@@ -36,16 +40,16 @@ console.log('my Promise tutorial')
 
 // another mini tutorial for Promise.all()
 
-const fetchData = (url) => {
-    return new Promise((resolve, reject) => {
-        fetch(url)
+const fetchDataz =  (url) => {
+    return new Promise(async (resolve, reject) => {
+        await fetch(url)
             .then(response => response.json())
             .then(data => resolve(data))
             .catch(error => reject(error))
     })
 }
-const fetchAllData = () => {
-    return Promise.all([
+const fetchAllData = async () => {
+    return await Promise.all([
         fetchData('https://jsonplaceholder.typicode.com/posts/1'),
         fetchData('https://jsonplaceholder.typicode.com/users/1')
     ])

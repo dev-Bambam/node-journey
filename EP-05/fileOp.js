@@ -1,21 +1,22 @@
-import fs from 'fs.promises';
+import fs from 'fs/promises';
 
-export const fileOperation = async (operation, fileName) => {
+export const fileOperation = async (operation, fileName, content = null) => {
   try {
+    let data;
     switch (operation) {
       case 'read':
-        var data = await fs.readFile(fileName, 'utf-8');
+        data = await fs.readFile(fileName, 'utf-8');
         break;
       case 'write':
-        var data = await fs.writeFile(fileName, 'utf-8')
+        data = await fs.writeFile(fileName, content);
+        break;
       default:
-        console.log('please input valid file operation or file name')
-        console.log(`valid file operation\nread\nwrite`)
+        console.log('Please input a valid file operation or file name');
+        console.log('Valid file operations: read, write');
         break;
     }
+    return data;
   } catch (error) {
-    return error
+      console.error(error);
   }
-  return data
 }
-

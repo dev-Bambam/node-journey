@@ -2,7 +2,7 @@ import http from 'http';
 import fs from 'fs';
 
 // reading in file 
-const landingPage = fs.readFileSync('./index.html', 'utf-8')
+let landingPage = fs.readFileSync('./index.html', 'utf-8')
 // step 1: create server
 const server = http.createServer((request, response) => {
     let path = request.url;
@@ -13,8 +13,15 @@ const server = http.createServer((request, response) => {
         response.writeHead(200, {
             "content-type": 'text/html'
         });
-        response.end(landingPage.replace('{{%%CONTENT%%}}', 'You are in the hompage'));
-        response.end(landingPage.replace('{{%%CONTENT%%}}', 'You are in the hompage'));
+        landingPage = landingPage.replace(
+          "{{%CONTENT%}}",
+          "You are in the hompage"
+        );
+        landingPage = landingPage.replace(
+          "{{%h2%}}",
+          "Home page"
+        );
+        response.end(landingPage);
     } else if (path === '/about') {
         response.writeHead(200, {
           "content-type": "text/html",

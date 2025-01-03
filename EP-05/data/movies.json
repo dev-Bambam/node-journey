@@ -1,0 +1,116 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "Inception",
+      "genre": ["Action", "Sci-Fi", "Thriller"],
+      "release_date": "2010-07-16",
+      "rating": 8.8,
+      "duration": "148 min",
+      "director": "Christopher Nolan",
+      "cast": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Ellen Page"],
+      "brief_description": "A skilled thief who steals secrets through the use of dream-sharing technology.",
+      "synopsis": "Dom Cobb is a thief with the rare ability to enter people's dreams and steal their secrets. He is offered a chance to have his criminal record erased if he can successfully perform an inception, planting an idea in someone's mind without them realizing it. As Cobb assembles his team, they navigate a world of shifting realities, leading to a tense and mind-bending finale.",
+      "image_url": "https://images.unsplash.com/photo-1516909829227-1e4e7c1a1f68"
+    },
+    {
+      "id": 2,
+      "title": "The Dark Knight",
+      "genre": ["Action", "Crime", "Drama"],
+      "release_date": "2008-07-18",
+      "rating": 9.0,
+      "duration": "152 min",
+      "director": "Christopher Nolan",
+      "cast": ["Christian Bale", "Heath Ledger", "Aaron Eckhart"],
+      "brief_description": "Batman faces the Joker, a criminal mastermind who seeks to plunge Gotham into anarchy.",
+      "synopsis": "Batman must confront the Joker, a criminal mastermind who thrives on chaos and seeks to destroy Gotham City. As the Joker manipulates Gotham's citizens and law enforcement, Batman struggles with his own moral code and the line between heroism and vigilantism. With Gotham's fate hanging in the balance, Batman must make difficult choices that will define the future of the city.",
+      "image_url": "https://images.unsplash.com/photo-1604987633237-bf2e1b1cbb9b"
+    },
+    {
+      "id": 3,
+      "title": "The Shawshank Redemption",
+      "genre": ["Drama"],
+      "release_date": "1994-09-22",
+      "rating": 9.3,
+      "duration": "142 min",
+      "director": "Frank Darabont",
+      "cast": ["Tim Robbins", "Morgan Freeman", "Bob Gunton"],
+      "brief_description": "Two imprisoned men bond over the course of many years, finding solace and redemption through acts of common decency.",
+      "synopsis": "Andy Dufresne, a banker wrongfully convicted of murder, forms an unlikely friendship with Ellis 'Red' Redding in Shawshank State Penitentiary. Over the years, Andy uses his intelligence and skills to gain the trust of the prison guards, while also helping the warden with money laundering. As he plans his escape, he inspires hope in his fellow inmates, especially Red, who finds redemption through their friendship.",
+      "image_url": "https://images.unsplash.com/photo-1521747116042-5e5f6b28e9b0"
+    },
+    {
+      "id": 4,
+      "title": "Interstellar",
+      "genre": ["Adventure", "Drama", "Sci-Fi"],
+      "release_date": "2014-11-07",
+      "rating": 8.6,
+      "duration": "169 min",
+      "director": "Christopher Nolan",
+      "cast": ["Matthew McConaughey", "Anne Hathaway", "Jessica Chastain"],
+      "brief_description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+      "synopsis": "With Earth on the brink of collapse, a team of astronauts led by Cooper embarks on a journey through a wormhole to find a new habitable planet for humanity. As they travel across distant worlds, they face incredible challenges and encounter the mysteries of space-time. Along the way, Cooper must grapple with the emotional cost of leaving his family behind and the hope of saving humanity.",
+      "image_url": "https://images.unsplash.com/photo-1549388604-817d5a75d1a4"
+    },
+    {
+      "id": 5,
+      "title": "The Godfather",
+      "genre": ["Crime", "Drama"],
+      "release_date": "1972-03-24",
+      "rating": 9.2,
+      "duration": "175 min",
+      "director": "Francis Ford Coppola",
+      "cast": ["Marlon Brando", "Al Pacino", "James Caan"],
+      "brief_description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+      "synopsis": "Vito Corleone, the head of the powerful Corleone crime family, seeks to maintain his influence while passing on his legacy to his son, Michael. As Michael is drawn deeper into the world of crime, he must make difficult decisions to protect his family and uphold the family's honor. The Godfather explores themes of power, loyalty, and the American dream.",
+      "image_url": "https://images.unsplash.com/photo-1515747242-b1c1e7a0d8bb"
+    },
+    {
+      "id": 6,
+      "title": "Forrest Gump",
+      "genre": ["Drama", "Romance"],
+      "release_date": "1994-07-06",
+      "rating": 8.8,
+      "duration": "142 min",
+      "director": "Robert Zemeckis",
+      "cast": ["Tom Hanks", "Robin Wright", "Gary Sinise"],
+      "brief_description": "The presidencies of Kennedy and Johnson, the Vietnam War, the civil rights movement, and other historical events unfold from the perspective of an Alabama man with an extraordinary life.",
+      "synopsis": "Forrest Gump, a simple man with a low IQ, unwittingly influences several historical events in the 20th century U.S. His love for his childhood friend, Jenny, and his success in various endeavors, including football and shrimp boating, make him an unlikely hero. Despite the challenges he faces, Forrest's unwavering optimism and loyalty touch the hearts of those around him.",
+      "image_url": "https://images.unsplash.com/photo-1501594907351-35d8d34b3fe5"
+    },
+    {
+      "id": 7,
+      "title": "The Matrix",
+      "genre": ["Action", "Sci-Fi"],
+      "release_date": "1999-03-31",
+      "rating": 8.7,
+      "duration": "136 min",
+      "director": "The Wachowskis",
+      "cast": ["Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"],
+      "brief_description": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+      "synopsis": "Neo, a computer hacker, discovers that the world he knows is an illusion controlled by machines. He is recruited by a group of rebels led by Morpheus to fight against the machines and free humanity from their control. As Neo learns to harness his powers, he must face the ultimate challenge of choosing between reality and the false world created by the Matrix.",
+      "image_url": "https://images.unsplash.com/photo-1561605873-36b3d8f58d29"
+    }
+  ],
+  "genres": [
+    "Action",
+    "Sci-Fi",
+    "Thriller",
+    "Crime",
+    "Drama",
+    "Adventure",
+    "Fantasy",
+    "Animation",
+    "Romance"
+  ],
+  "top_rated": [
+    {
+      "movie_id": 3,
+      "rating": 9.3
+    },
+    {
+      "movie_id": 2,
+      "rating": 9.0
+    }
+  ]
+}

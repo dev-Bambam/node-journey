@@ -2,7 +2,9 @@ import http from 'http';
 import fs from 'fs';
 
 // reading in file 
-let landingPage = fs.readFileSync('./index.html', 'utf-8')
+let landingPage = fs.readFileSync('./templates/index.html', 'utf-8');
+let movieRawData = fs.readFileSync('./data/movies.json');
+
 // step 1: create server
 const server = http.createServer((request, response) => {
     let path = request.url;

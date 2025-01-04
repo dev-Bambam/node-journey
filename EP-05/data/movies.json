@@ -1,5 +1,5 @@
-{
-  "movies": [
+
+ [
     {
       "id": 1,
       "title": "Inception",
@@ -91,26 +91,5 @@
       "synopsis": "Neo, a computer hacker, discovers that the world he knows is an illusion controlled by machines. He is recruited by a group of rebels led by Morpheus to fight against the machines and free humanity from their control. As Neo learns to harness his powers, he must face the ultimate challenge of choosing between reality and the false world created by the Matrix.",
       "image_url": "https://images.unsplash.com/photo-1561605873-36b3d8f58d29"
     }
-  ],
-  "genres": [
-    "Action",
-    "Sci-Fi",
-    "Thriller",
-    "Crime",
-    "Drama",
-    "Adventure",
-    "Fantasy",
-    "Animation",
-    "Romance"
-  ],
-  "top_rated": [
-    {
-      "movie_id": 3,
-      "rating": 9.3
-    },
-    {
-      "movie_id": 2,
-      "rating": 9.0
-    }
   ]
-}
+

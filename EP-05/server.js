@@ -5,17 +5,23 @@ import fs from 'fs';
 let landingPage = fs.readFileSync('./templates/index.html', 'utf-8');
 let movieJSONData = JSON.parse(fs.readFileSync('./data/movies.json', 'utf-8'));
 let moviesHtml = fs.readFileSync('./templates/movie.html', 'utf-8');
-const { action, sciFi, thriller} = movieJSONData.genre;
+
+
 
 // mapping the input
 
-const movie = movieJSONData.map((movie) => {
-  let output = moviesHtml.replace("{{%movieTitle%}},", movie.title);
-  output = moviesHtml.replace("{{%genre%}},", action);
-  output = moviesHtml.replace("{{%year%}},", movie.release_date);
+const movies = movieJSONData.map((movie) => {
+  let output = moviesHtml
+    .replace("{{%MOVIETITLE%}}", movie.title)
+    .replace("{{%GENRE%}}", movie.genre[0])
+    .replace("{{%POSTERE%}}", movie.image_url)
+    .replace("{{%YEAR%}}", movie.release_date);
 
   return output;
 });
+
+
+
 // step 1: create server
 const server = http.createServer((request, response) => {
     let path = request.url;
@@ -27,8 +33,8 @@ const server = http.createServer((request, response) => {
     response.writeHead(200, {
       'content-type': 'text/html'
     })
-    response.end(landingPage.replace('{{%CONTENT%}}', 'you are in the hompage'))
-    console.log(movie)
+    response.end(landingPage.replace('{{%CONTENT%}}', movies.join('')))
+    // console.log(movies)
   }
   
 });

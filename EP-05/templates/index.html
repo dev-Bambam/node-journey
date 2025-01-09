@@ -1,316 +1,410 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movie Hub</title>
     <style>
-        body {
-            font-family: 'Poppins', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #121212;
-            color: #EAEAEA;
-            scroll-behavior: smooth;
-            font-size: 16px;
-        }
+      body {
+        font-family: "Poppins", Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #121212;
+        color: #eaeaea;
+        scroll-behavior: smooth;
+        font-size: 16px;
+      }
 
-        header {
-            background: linear-gradient(90deg, #FF4500, #1E90FF);
-            color: white;
-            padding: 4rem 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
+      header {
+        background: linear-gradient(90deg, #ff4500, #1e90ff);
+        color: white;
+        padding: 4rem 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
 
-        header h1 {
-            font-size: 3rem;
-            font-weight: bold;
-            margin: 0;
-            font-family: 'Montserrat', sans-serif;
-        }
+      header h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        margin: 0;
+        font-family: "Montserrat", sans-serif;
+      }
 
-        header p {
-            font-size: 1.5rem;
-            margin-top: 1rem;
-            font-family: 'Roboto', sans-serif;
-        }
+      header p {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+        font-family: "Roboto", sans-serif;
+      }
 
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0));
-            animation: rotateBackground 10s linear infinite;
-            transform-origin: center;
-        }
+      header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(
+          circle at center,
+          rgba(255, 255, 255, 0.1),
+          rgba(0, 0, 0, 0)
+        );
+        animation: rotateBackground 10s linear infinite;
+        transform-origin: center;
+      }
 
-        @keyframes rotateBackground {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
+      @keyframes rotateBackground {
+        0% {
+          transform: rotate(0deg);
         }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(5px);
-            z-index: 1000;
-            padding: 0.5rem 1rem;
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(5px);
+        z-index: 1000;
+        padding: 0.5rem 1rem;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 1rem;
+      }
+
+      nav a {
+        color: #eaeaea;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+
+      nav a:hover {
+        color: #ff4500;
+        transform: scale(1.1);
+      }
+
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 0.3rem;
+        cursor: pointer;
+      }
+
+      .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: #eaeaea;
+      }
+
+      .mobile-nav {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        padding: 1rem;
+      }
+
+      .mobile-nav.open {
+        display: flex;
+      }
+
+      .movie {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        justify-content: center;
+        padding: 2rem;
+      }
+
+      @media (min-width: 768px) {
+        .movie {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .movie {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @media (min-width: 1280px) {
+        .movie {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+
+      @media (min-width: 1536px) {
+        .movie {
+          grid-template-columns: repeat(6, 1fr);
+        }
+      }
+
+      .movie-card {
+        background: #222;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .movie-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+      }
+
+      .movie-card img {
+        width: 100%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+        border-bottom: 2px solid #ff4500;
+        border-radius: 10px 10px 0 0;
+        transition: filter 0.3s ease;
+      }
+
+      .movie-card:hover img {
+        filter: brightness(0.8);
+      }
+
+      .play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .movie-card:hover .play-button {
+        opacity: 1;
+      }
+
+      .movie-card h3 {
+        margin: 0.5rem;
+        font-size: 1rem;
+        color: #ff4500;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .movie-card p {
+        margin: 0.5rem;
+        font-size: 0.85rem;
+        color: #ccc;
+      }
+
+      footer {
+        text-align: center;
+        background-color: #1e1e1e;
+        color: #eaeaea;
+        padding: 2rem 0;
+      }
+
+      footer .social-icons {
+        margin-top: 1rem;
+      }
+
+      footer .social-icons a {
+        margin: 0 0.5rem;
+        color: #eaeaea;
+        font-size: 1.5rem;
+        transition: color 0.3s ease;
+      }
+
+      footer .social-icons a:hover {
+        color: #ff4500;
+      }
+
+      @media (max-width: 768px) {
+        .hamburger {
+          display: flex;
         }
 
         .nav-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        nav a {
-            color: #EAEAEA;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #FF4500;
-            transform: scale(1.1);
-        }
-
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 0.3rem;
-            cursor: pointer;
-        }
-
-        .hamburger div {
-            width: 25px;
-            height: 3px;
-            background-color: #EAEAEA;
+          display: none;
         }
 
         .mobile-nav {
-            display: none;
-            flex-direction: column;
-            gap: 1rem;
-            background-color: rgba(0, 0, 0, 0.9);
-            position: absolute;
-            top: 100%;
-            right: 0;
-            left: 0;
-            padding: 1rem;
+          display: none;
         }
 
-        .mobile-nav.open {
-            display: flex;
+        section .container {
+          padding: 2rem;
         }
+      }
 
-        .movie {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            justify-content: center;
-            padding: 2rem;
-        }
-
-        @media (min-width: 768px) {
-            .movie {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .movie {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        @media (min-width: 1280px) {
-            .movie {
-                grid-template-columns: repeat(4, 1fr);
-            }
-        }
-
-        @media (min-width: 1536px) {
-            .movie {
-                grid-template-columns: repeat(6, 1fr);
-            }
+      @media (max-width: 480px) {
+        header h1 {
+          font-size: 2rem;
         }
 
         .movie-card {
-            background: #222;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            display: flex;
-            flex-direction: column;
+          width: 100%;
+        }
+      }
+
+      /* for description page */
+       .movie-details {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .movie-poster {
+        max-width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .movie-info {
+        flex: 1;
+      }
+
+      .movie-info h2 {
+        font-size: 2rem;
+        color: #ff4500;
+        margin-bottom: 1rem;
+      }
+
+      .movie-info p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #ccc;
+      }
+
+      .movie-actions {
+        margin-top: 1.5rem;
+      }
+
+      .watch-trailer {
+        display: inline-block;
+        background-color: #ff4500;
+        color: #fff;
+        text-decoration: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .watch-trailer:hover {
+        background-color: #e03e00;
+        transform: scale(1.05);
+      }
+
+      @media (min-width: 768px) {
+        .movie-details {
+          flex-direction: row;
+          gap: 2rem;
         }
 
-        .movie-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+        .movie-poster {
+          max-width: 40%;
         }
 
-        .movie-card img {
-            width: 100%;
-            aspect-ratio: 16/9;
-            object-fit: cover;
-            border-bottom: 2px solid #FF4500;
-            border-radius: 10px 10px 0 0;
+        .movie-info {
+          flex: 1;
         }
 
-        .play-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(0, 0, 0, 0.6);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            cursor: pointer;
-            opacity: 0;
-            transition: opacity 0.3s ease;
+        .movie-info h2 {
+          font-size: 2.5rem;
         }
 
-        .movie-card:hover .play-button {
-            opacity: 1;
+        .movie-info p {
+          font-size: 1.1rem;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .movie-details {
+          gap: 3rem;
         }
 
-        .movie-card h3 {
-            margin: 0.5rem;
-            font-size: 1rem;
-            color: #FF4500;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+        .movie-poster {
+          max-width: 35%;
         }
 
-        .movie-card p {
-            margin: 0.5rem;
-            font-size: 0.85rem;
-            color: #ccc;
+        .movie-info h2 {
+          font-size: 3rem;
         }
 
-        footer {
-            text-align: center;
-            background-color: #1e1e1e;
-            color: #EAEAEA;
-            padding: 2rem 0;
+        .movie-info p {
+          font-size: 1.2rem;
         }
-
-        footer .social-icons {
-            margin-top: 1rem;
-        }
-
-        footer .social-icons a {
-            margin: 0 0.5rem;
-            color: #EAEAEA;
-            font-size: 1.5rem;
-            transition: color 0.3s ease;
-        }
-
-        footer .social-icons a:hover {
-            color: #FF4500;
-        }
-
-        @media (max-width: 768px) {
-            .hamburger {
-                display: flex;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .mobile-nav {
-                display: none;
-            }
-
-            section .container {
-                padding: 2rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 2rem;
-            }
-
-            .movie-card {
-                width: 100%;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Welcome to Movie Hub</h1>
-        <p>Your ultimate destination for movie enthusiasts</p>
+      <h1>Welcome to Movie Hub</h1>
+      <p>Your ultimate destination for movie enthusiasts</p>
     </header>
     <nav>
-        <div class="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#now-showing">Now Showing</a>
-            <a href="#coming-soon">Coming Soon</a>
-            <a href="#contact">Contact</a>
-        </div>
-        <div class="mobile-nav">
-            <a href="#home">Home</a>
-            <a href="#now-showing">Now Showing</a>
-            <a href="#coming-soon">Coming Soon</a>
-            <a href="#contact">Contact</a>
-        </div>
+      <div class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="nav-links">
+        <a href="home">Home</a>
+        <a href="now-showing">Now Showing</a>
+        <a href="coming-soon">Coming Soon</a>
+        <a href="contact">Contact</a>
+      </div>
+      <div class="mobile-nav">
+        <a href="home">Home</a>
+        <a href="now-showing">Now Showing</a>
+        <a href="coming-soon">Coming Soon</a>
+        <a href="contact">Contact</a>
+      </div>
     </nav>
     <section id="home">
-        <div class="container">
-            <h2>Featured Movies</h2>
-            <div class="movie">
-                {{%CONTENT%}}
-            </div>
-        </div>
-        
+      {{%CONTENT%}}
     </section>
     <footer>
-        <p>&copy; 2025 Movie Hub. All Rights Reserved.</p>
-        <div class="social-icons">
-            <a href="#">&#x1F426;</a>
-            <a href="#">&#x1F4F1;</a>
-            <a href="#">&#x1F310;</a>
-        </div>
+      <p>&copy; 2025 Movie Hub. All Rights Reserved.</p>
+      <div class="social-icons">
+        <a href="#">&#x1F426;</a>
+        <a href="#">&#x1F4F1;</a>
+        <a href="#">&#x1F310;</a>
+      </div>
     </footer>
     <script>
-        const hamburger = document.querySelector('.hamburger');
-        const mobileNav = document.querySelector('.mobile-nav');
+      const hamburger = document.querySelector(".hamburger");
+      const mobileNav = document.querySelector(".mobile-nav");
 
-        hamburger.addEventListener('click', () => {
-            mobileNav.classList.toggle('open');
-        });
+      hamburger.addEventListener("click", () => {
+        mobileNav.classList.toggle("open");
+      });
     </script>
-</body>
+  </body>
 </html>

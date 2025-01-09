@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "class": "movie",
     "title": "Inception",
     "genre": ["Action", "Sci-Fi", "Thriller"],
     "release_date": "2010-07-16",
@@ -10,10 +11,11 @@
     "cast": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Ellen Page"],
     "brief_description": "A skilled thief who steals secrets through dream-sharing technology.",
     "synopsis": "Dom Cobb is a thief with the rare ability to enter people's dreams and steal their secrets. He is offered a chance to have his criminal record erased if he can successfully perform an inception, planting an idea in someone's mind without them realizing it. As Cobb assembles his team, they navigate a world of shifting realities, leading to a tense and mind-bending finale.",
-    "image_url": "../assets/images/inception.jpg"
+    "image_url": "asset/images/inception.jpeg"
   },
   {
     "id": 2,
+    "class": "movie",
     "title": "The Dark Knight",
     "genre": ["Action", "Crime", "Drama"],
     "release_date": "2008-07-18",
@@ -23,10 +25,11 @@
     "cast": ["Christian Bale", "Heath Ledger", "Aaron Eckhart"],
     "brief_description": "Batman faces the Joker, a criminal mastermind who seeks to plunge Gotham into anarchy.",
     "synopsis": "Batman must confront the Joker, a criminal mastermind who thrives on chaos and seeks to destroy Gotham City. As the Joker manipulates Gotham's citizens and law enforcement, Batman struggles with his own moral code and the line between heroism and vigilantism. With Gotham's fate hanging in the balance, Batman must make difficult choices that will define the future of the city.",
-    "image_url": "../asset/images/dark.jpeg"
+    "image_url": "asset/images/dark.jpeg"
   },
   {
     "id": 3,
+    "class": "movie",
     "title": "The Shawshank Redemption",
     "genre": ["Drama"],
     "release_date": "1994-09-22",
@@ -36,10 +39,11 @@
     "cast": ["Tim Robbins", "Morgan Freeman", "Bob Gunton"],
     "brief_description": "Two imprisoned men bond over the years, finding solace and redemption.",
     "synopsis": "Andy Dufresne, a banker wrongfully convicted of murder, forms an unlikely friendship with Ellis 'Red' Redding in Shawshank State Penitentiary. Over the years, Andy uses his intelligence and skills to gain the trust of the prison guards, while also helping the warden with money laundering. As he plans his escape, he inspires hope in his fellow inmates, especially Red, who finds redemption through their friendship.",
-    "image_url": "../asset/images/shawank.jpg"
+    "image_url": "asset/images/shawank.jpeg"
   },
   {
     "id": 4,
+    "class": "movie",
     "title": "Interstellar",
     "genre": ["Adventure", "Drama", "Sci-Fi"],
     "release_date": "2014-11-07",
@@ -49,10 +53,11 @@
     "cast": ["Matthew McConaughey", "Anne Hathaway", "Jessica Chastain"],
     "brief_description": "A team of explorers travel through a wormhole to ensure humanity's survival.",
     "synopsis": "With Earth on the brink of collapse, a team of astronauts led by Cooper embarks on a journey through a wormhole to find a new habitable planet for humanity. As they travel across distant worlds, they face incredible challenges and encounter the mysteries of space-time. Along the way, Cooper must grapple with the emotional cost of leaving his family behind and the hope of saving humanity.",
-    "image_url": "../asset/images/interstellar.jpeg"
+    "image_url": "asset/images/interstellar.jpeg"
   },
   {
     "id": 5,
+    "class": "movie",
     "title": "The Godfather",
     "genre": ["Crime", "Drama"],
     "release_date": "1972-03-24",
@@ -62,10 +67,11 @@
     "cast": ["Marlon Brando", "Al Pacino", "James Caan"],
     "brief_description": "The patriarch of a crime dynasty transfers control to his reluctant son.",
     "synopsis": "Vito Corleone, the head of the powerful Corleone crime family, seeks to maintain his influence while passing on his legacy to his son, Michael. As Michael is drawn deeper into the world of crime, he must make difficult decisions to protect his family and uphold the family's honor. The Godfather explores themes of power, loyalty, and the American dream.",
-    "image_url": "../asset/images/godfather.jpg"
+    "image_url": "asset/images/godfather.jpeg"
   },
   {
     "id": 6,
+    "class": "movie",
     "title": "Forrest Gump",
     "genre": ["Drama", "Romance"],
     "release_date": "1994-07-06",
@@ -75,10 +81,11 @@
     "cast": ["Tom Hanks", "Robin Wright", "Gary Sinise"],
     "brief_description": "An extraordinary life unfolds through historical events.",
     "synopsis": "Forrest Gump, a simple man with a low IQ, unwittingly influences several historical events in the 20th century U.S. His love for his childhood friend, Jenny, and his success in various endeavors, including football and shrimp boating, make him an unlikely hero. Despite the challenges he faces, Forrest's unwavering optimism and loyalty touch the hearts of those around him.",
-    "image_url": "../asset/images/forrest.jpg"
+    "image_url": "asset/images/forrest.jpeg"
   },
   {
     "id": 7,
+    "class": "movie",
     "title": "The Matrix",
     "genre": ["Action", "Sci-Fi"],
     "release_date": "1999-03-31",
@@ -88,10 +95,11 @@
     "cast": ["Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"],
     "brief_description": "A hacker learns the truth about reality and fights its controllers.",
     "synopsis": "Neo, a computer hacker, discovers that the world he knows is an illusion controlled by machines. He is recruited by a group of rebels led by Morpheus to fight against the machines and free humanity from their control. As Neo learns to harness his powers, he must face the ultimate challenge of choosing between reality and the false world created by the Matrix.",
-    "image_url": "../asset/images/matrix.jpg"
+    "image_url": "asset/images/matrix.jpeg"
   },
   {
     "id": 8,
+    "class": "movie",
     "title": "Pulp Fiction",
     "genre": ["Crime", "Drama"],
     "release_date": "1994-10-14",
@@ -101,10 +109,11 @@
     "cast": ["John Travolta", "Uma Thurman", "Samuel L. Jackson"],
     "brief_description": "Interconnected stories of crime in Los Angeles.",
     "synopsis": "Pulp Fiction intertwines multiple storylines of crime in Los Angeles, including a hitman duo's accidental misadventure, a boxer's moral dilemma, and a gangster's wife's unexpected ordeal. With sharp dialogue, dark humor, and nonlinear storytelling, the film explores themes of redemption, morality, and chaos.",
-    "image_url": "../asset/images/fiction.jpg"
+    "image_url": "asset/images/fiction.jpeg"
   },
   {
     "id": 9,
+    "class": "movie",
     "title": "Fight Club",
     "genre": ["Drama"],
     "release_date": "1999-10-15",
@@ -114,10 +123,11 @@
     "cast": ["Brad Pitt", "Edward Norton", "Helena Bonham Carter"],
     "brief_description": "A disillusioned man forms an underground fight club.",
     "synopsis": "An insomniac office worker and a soap salesman form an underground fight club that evolves into something far more sinister. As their bond grows, the boundaries between reality and delusion blur, leading to a shocking revelation about the narrator's identity and the true nature of their organization.",
-    "image_url": "../asset/images/fight.jpg"
+    "image_url": "asset/images/fight.jpeg"
   },
   {
     "id": 10,
+    "class": "movie",
     "title": "The Avengers",
     "genre": ["Action", "Adventure", "Sci-Fi"],
     "release_date": "2012-05-04",
@@ -127,10 +137,11 @@
     "cast": ["Robert Downey Jr.", "Chris Evans", "Scarlett Johansson"],
     "brief_description": "Earth's mightiest heroes unite to fight an alien invasion.",
     "synopsis": "When Earth is threatened by Loki and his alien army, Nick Fury assembles a team of superheroes to save the planet. The Avengers, including Iron Man, Captain America, Thor, and Hulk, must learn to work together despite their differences to stop the invasion and protect humanity.",
-    "image_url": "../asset/images/avengers.jpg"
+    "image_url": "asset/images/avengers.jpeg"
   },
     {
       "id": 11,
+      "class": "movie",
       "title": "The Lord of the Rings: The Fellowship of the Ring",
       "genre": ["Adventure", "Drama", "Fantasy"],
       "release_date": "2001-12-19",
@@ -140,10 +151,11 @@
       "cast": ["Elijah Wood", "Ian McKellen", "Orlando Bloom"],
       "brief_description": "A hobbit and his companions embark on a quest to destroy a powerful ring.",
       "synopsis": "Frodo Baggins inherits the One Ring, an ancient artifact of unimaginable power. Accompanied by a fellowship of allies, he must journey to Mount Doom to destroy it, preventing the Dark Lord Sauron from regaining his full strength. Along the way, they face numerous challenges and dangers, testing their courage and unity.",
-      "image_url": "../asset/images/lordOfTheRing.jpg"
+      "image_url": "asset/images/lotr.jpeg"
     },
     {
       "id": 12,
+      "class": "movie",
       "title": "The Princess",
       "genre": ["Action", "Adventure", "Drama"],
       "release_date": "2000-05-05",
@@ -153,10 +165,11 @@
       "cast": ["Russell Crowe", "Joaquin Phoenix", "Connie Nielsen"],
       "brief_description": "A beautiful princess must navigate the complexities of royal politics and her own heart in this epic tale of love, loyalty, and self-discovery.",
       "synopsis": "In a world of ancient kingdoms and medieval chivalry, Princess Sofia finds herself at the center of a treacherous game of power and deception. As she navigates the intricate web of alliances and rivalries, she must also confront her own desires and doubts. Will she find true love and happiness, or will the demands of her royal duties tear her apart?",
-      "image_url": "../asset/images/princess.jpg"
+      "image_url": "asset/images/princess.jpeg"
     },
     {
       "id": 13,
+      "class": "movie",
       "title": "The Lion King",
       "genre": ["Animation", "Adventure", "Drama"],
       "release_date": "1994-06-24",
@@ -166,10 +179,11 @@
       "cast": ["Matthew Broderick", "Jeremy Irons", "James Earl Jones"],
       "brief_description": "A lion cub's journey to reclaim his throne.",
       "synopsis": "Simba, a young lion cub, is destined to become king of the Pride Lands. However, his uncle Scar plots to usurp the throne. After tragedy strikes, Simba flees, only to later return as an adult to reclaim his rightful place as king and restore balance to the kingdom.",
-      "image_url": "../asset/images/lion.jpg"
+      "image_url": "asset/images/lion.jpeg"
     },
     {
       "id": 14,
+      "class": "movie",
       "title": "Avatar",
       "genre": ["Action", "Adventure", "Sci-Fi"],
       "release_date": "2009-12-18",
@@ -179,10 +193,11 @@
       "cast": ["Sam Worthington", "Zoe Saldana", "Sigourney Weaver"],
       "brief_description": "A paraplegic Marine becomes part of an alien culture on Pandora.",
       "synopsis": "Jake Sully, a former Marine, is sent to the alien planet Pandora as part of the Avatar Program. He integrates into the Na'vi culture and grows to love their way of life. As corporate interests threaten Pandora's ecosystem, Jake must choose between his human allegiance and the people he has come to call family.",
-      "image_url": "../asset/images/avatar.jpeg"
+      "image_url": "asset/images/avatar.jpeg"
     },
     {
       "id": 15,
+      "class": "movie",
       "title": "Titanic",
       "genre": ["Drama", "Romance"],
       "release_date": "1997-12-19",
@@ -192,10 +207,11 @@
       "cast": ["Leonardo DiCaprio", "Kate Winslet", "Billy Zane"],
       "brief_description": "A romance blossoms aboard the ill-fated Titanic.",
       "synopsis": "Jack, a penniless artist, and Rose, a young aristocrat, fall in love aboard the Titanic. Their romance faces challenges from societal expectations and the impending disaster. As the ship meets its tragic fate, their bond is tested in the face of life-and-death decisions.",
-      "image_url": "../asset/images/titanic.jpeg"
+      "image_url": "asset/images/titanic.jpeg"
     },
     {
       "id": 16,
+      "class": "movie",
       "title": "Saving Private Ryan",
       "genre": ["Drama", "War"],
       "release_date": "1998-07-24",
@@ -205,10 +221,11 @@
       "cast": ["Tom Hanks", "Matt Damon", "Tom Sizemore"],
       "brief_description": "A group of soldiers embarks on a mission to rescue a paratrooper.",
       "synopsis": "During World War II, Captain Miller leads a group of soldiers on a dangerous mission to find and bring home Private Ryan, whose brothers have been killed in action. The journey tests their resolve and raises questions about the cost of war and the value of one life.",
-      "image_url": "../asset/images/rescue.jpeg"
+      "image_url": "asset/images/rescue.jpeg"
     },
     {
       "id": 17,
+      "class": "movie",
       "title": "The Social Network",
       "genre": ["Biography", "Drama"],
       "release_date": "2010-10-01",
@@ -218,10 +235,11 @@
       "cast": ["Jesse Eisenberg", "Andrew Garfield", "Justin Timberlake"],
       "brief_description": "The story of Facebook's creation and its founders.",
       "synopsis": "Mark Zuckerberg, a Harvard student, creates Facebook, a revolutionary social networking platform. As the site grows in popularity, personal and legal conflicts arise between Mark and his co-founders, highlighting the cost of ambition and innovation.",
-      "image_url": "../asset/images/social.jpg"
+      "image_url": "asset/images/social.jpeg"
     },
     {
       "id": 18,
+      "class": "movie",
       "title": "The Silence of the Lambs",
       "genre": ["Crime", "Drama", "Thriller"],
       "release_date": "1991-02-14",
@@ -231,10 +249,11 @@
       "cast": ["Jodie Foster", "Anthony Hopkins", "Scott Glenn"],
       "brief_description": "A young FBI cadet seeks the help of a cannibalistic killer.",
       "synopsis": "Clarice Starling, an FBI trainee, seeks the assistance of imprisoned cannibalistic killer Dr. Hannibal Lecter to catch another serial killer, Buffalo Bill. As Lecter manipulates Clarice, their interactions become a psychological battle of wits, revealing dark secrets and motivations.",
-      "image_url": "../asset/images/silence.jpg"
+      "image_url": "asset/images/silence.jpeg"
     },
     {
       "id": 19,
+      "class": "movie",
       "title": "Jurassic Park",
       "genre": ["Adventure", "Sci-Fi", "Thriller"],
       "release_date": "1993-06-11",
@@ -244,10 +263,11 @@
       "cast": ["Sam Neill", "Laura Dern", "Jeff Goldblum"],
       "brief_description": "Dinosaurs are brought back to life in a theme park.",
       "synopsis": "John Hammond creates Jurassic Park, a theme park featuring living dinosaurs. When the park's security systems fail, visitors and staff must fight to survive against the prehistoric predators. The film explores the consequences of playing with nature's power.",
-      "image_url": "../asset/images/jurassic.jpeg"
+      "image_url": "asset/images/jurassic.jpeg"
     },
     {
       "id": 20,
+      "class": "movie",
       "title": "Whiplash",
       "genre": ["Drama", "Music"],
       "release_date": "2014-10-10",
@@ -257,7 +277,7 @@
       "cast": ["Miles Teller", "J.K. Simmons", "Paul Reiser"],
       "brief_description": "A young drummer's ambition is tested by an abusive instructor.",
       "synopsis": "Andrew, a young and ambitious jazz drummer, enrolls in a prestigious music conservatory. Under the tutelage of Terence Fletcher, a ruthless instructor, Andrew faces physical and emotional challenges that push him to his limits in pursuit of greatness.",
-      "image_url": "../asset/images/whip.jpeg"
+      "image_url": "asset/images/whip.jpeg"
     }
 
 ]

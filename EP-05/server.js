@@ -27,7 +27,9 @@ const movies = movieJSONData.map((movie) => {
 });
 
 // Create the server
-const server = http.createServer((request, response) => {
+const server = http.createServer();
+// listen to request event
+server.on('request', (request, response) => {
   let { query, pathname } = url.parse(request.url.toLocaleLowerCase(), true);
 
   // Serve static files
@@ -45,6 +47,7 @@ const server = http.createServer((request, response) => {
             ".jpeg": "image/jpeg",
             ".png": "image/png",
             ".gif": "image/gif",
+            ".css": "text/css",
           }[ext] || "application/octet-stream";
 
         response.writeHead(200, { "content-type": mimeType });
